@@ -1,0 +1,24 @@
+1. compiling
+mkdir -p bin
+g++ client/client.cpp -Iutils -o bin/client
+g++ server/server.cpp -Iutils -o bin/server
+
+2. running in two separate terminal first server then client
+./bin/server   - terminal 1
+
+./bin/client   - terminal 2
+
+after connecting log in server close server, output is shown in client terminal
+
+3. expected sample output
+--- Network Analyzer Report ---
+
+Latency (ms):
+  avg: 1.25928
+  min: 0.127
+  max: 2.854
+  p95: 2.766
+  p99: 2.838
+
+Bandwidth:
+  20.1344 Mbps
