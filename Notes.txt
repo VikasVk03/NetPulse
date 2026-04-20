@@ -1,3 +1,5 @@
+** Latency_and_Bandwidth_Analyzer ** 
+
 1. compiling
 mkdir -p bin
 g++ client/client.cpp -Iutils -o bin/client
@@ -22,3 +24,102 @@ Latency (ms):
 
 Bandwidth:
   20.1344 Mbps
+
+
+** Testing ** 
+
+--- Network Analyzer Report ---
+
+Latency (ms):
+  avg: 4.56958
+  min: 0.35
+  max: 8.936
+  p95: 8.713
+  p99: 8.901
+
+Bandwidth:
+  11.4444 Mbps
+
+
+--- Network Analyzer Report ---
+
+Latency (ms):
+  avg: 1.03006
+  min: 0.065
+  max: 2.26
+  p95: 2.136
+  p99: 2.241
+
+Bandwidth:
+  12.5651 Mbps
+
+--- Network Analyzer Report ---
+
+Latency (ms):
+  avg: 3.12702
+  min: 0.235
+  max: 5.604
+  p95: 5.537
+  p99: 5.597
+
+Bandwidth:
+  8.36027 Mbps
+
+** TCP_latency_checker ** 
+
+1. compiling
+mkdir -p bin
+g++ client/client.cpp  -o bin/client
+g++ server/server.cpp  -o bin/server
+
+2. running in two separate terminal first server then client
+./bin/server   - terminal 1
+
+./bin/client   - terminal 2
+
+
+3. expected sample output (immediate output)
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 93 microseconds
+Max RTT: 192 microseconds
+
+
+** Testing **
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 468 microseconds
+Max RTT: 2945 microseconds
+
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 129 microseconds
+Max RTT: 323 microseconds
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 481 microseconds
+Max RTT: 3442 microseconds
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 402 microseconds
+Max RTT: 2427 microseconds
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 582 microseconds
+Max RTT: 6189 microseconds
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 406 microseconds
+Max RTT: 1530 microseconds
+
+==== Latency Stats ====
+Packets Sent: 100
+Avg RTT: 422 microseconds
+Max RTT: 1018 microseconds
