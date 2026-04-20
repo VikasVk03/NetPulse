@@ -2,7 +2,7 @@
 #include <cstring>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include "protocol.h"
+#include "../utils/protocol.h"
 
 #define PORT 9000
 
@@ -76,6 +76,7 @@ int main()
         else if (pkt.type == 2)
         {
             // bandwith -> do noting
+            continue;
         }
 
         // echo back full packet

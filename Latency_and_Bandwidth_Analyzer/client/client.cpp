@@ -4,8 +4,8 @@
 #include <cstring>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include "protocol.h"
-#include "timer.h"
+#include "../utils/protocol.h"
+#include "../utils/timer.h"
 
 #define PORT 9000
 #define NUM_PACKETS 1000
